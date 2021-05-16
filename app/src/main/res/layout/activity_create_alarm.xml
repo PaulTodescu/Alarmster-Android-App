@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/fragment_createalarm_timePickerLayout"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_time"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <RadioGroup
+                android:id="@+id/radioButtonsTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView1"
+                android:gravity="center"
+                android:checkedButton="@id/radio_24">
+
+                <RadioButton android:id="@+id/radio_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_24_hour"
+                    android:onClick="onRadioButtonClicked"
+                    android:buttonTint="#FFF"/>
+
+                <RadioButton android:id="@+id/radio_am_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/am_pm"
+                    android:onClick="onRadioButtonClicked"
+                    android:buttonTint="#FFF"/>
+            </RadioGroup>
+
+            <TimePicker
+                android:id="@+id/createalarm_timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioButtonsTime"
+                android:layout_marginTop="-15dp"
+                android:numbersTextColor="#000000"
+                android:timePickerMode="spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@+id/createalarm_timePicker">
+
+                <Button
+                    android:id="@+id/monday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/m"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/tuesday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/t"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/wednesday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/w"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/thursday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/t"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/friday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/f"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/saturday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/s"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/sunday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/day_button"
+                    android:textColor="#FFF"
+                    android:text="@string/s"
+                    tools:ignore="ButtonStyle" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/bar1"
+            android:layout_below="@id/fragment_createalarm_timePickerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:id="@+id/music_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/bar1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/music_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_your_music"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <ImageView
+                android:id="@+id/add_music_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/media_button"
+                android:src="@drawable/ic_baseline_queue_music_24"
+                android:textColor="#FFF"
+                tools:ignore="ButtonStyle"
+                android:contentDescription="@string/open_choose_music_screen" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bar2"
+            android:layout_below="@id/music_section"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:id="@+id/text_and_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/bar2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/enter_text"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:hint="@string/enter_text"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:textColor="#000000"
+                android:inputType="text"
+                android:autofillHints=""
+                android:ems="30"
+                android:textSize="14sp"
+                android:background="@drawable/edit_text_shape"/>
+
+            <Button
+                android:id="@+id/pick_color_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/color_button"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bar3"
+            android:layout_below="@id/text_and_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#000000" />
+
+
+        <LinearLayout
+            android:id="@+id/image_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/bar3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_your_image"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <ImageView
+                android:id="@+id/add_image_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/media_button"
+                android:src="@drawable/ic_baseline_image_search_24"
+                android:textColor="#FFF"
+                tools:ignore="ButtonStyle"
+                android:contentDescription="@string/open_choose_image_screen" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bar4"
+            android:layout_below="@id/image_section"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/bar4"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/confirm_alarm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/new_alarm_button"
+                android:text="@string/confirm"
+                android:textColor="#FFF"
+                android:layout_marginRight="15dp"
+                tools:ignore="ButtonStyle"
+                android:layout_marginEnd="15dp" />
+
+            <Button
+                android:id="@+id/cancel_alarm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/new_alarm_button"
+                android:text="@string/cancel"
+                android:textColor="#FFF"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

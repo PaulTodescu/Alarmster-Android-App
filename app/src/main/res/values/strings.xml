@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Alarmster</string>
+    <string name="toolbar_title">Toolbar Title</string>
+    <string name="New_Alarm">New Alarm</string>
+    <string name="next_alarm">  :  </string>
+    <string name="confirm">Confirm</string>
+    <string name="alarm_1">ALARM 1</string>
+    <string name="sample_data">9:38 AM</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="set_time">SET TIME:</string>
+    <string name="_24_hour">24 Hour</string>
+    <string name="am_pm">AM/PM</string>
+    <string name="m">M</string>
+    <string name="w">W</string>
+    <string name="t">T</string>
+    <string name="f">F</string>
+    <string name="s">S</string>
+    <string name="choose_your_music">CHOOSE YOUR MUSIC</string>
+    <string name="open_choose_music_screen">open choose music screen</string>
+    <string name="open_choose_image_screen" />
+    <string name="choose_your_image">CHOOSE YOUR IMAGE</string>
+    <string name="enter_text">ENTER TEXT (optional)</string>
+    <string name="default_songs">DEFAULT SONGS</string>
+    <string name="import_song">YOUR SONGS</string>
+    <string name="your_images">YOUR IMAGES</string>
+    <string name="default_images">DEFAULT IMAGES</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="noalarm">No Alarm Set</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="your_image">Your Image</string>
+</resources>

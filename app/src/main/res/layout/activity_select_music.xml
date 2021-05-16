@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/song_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:checkedButton="@id/default_songs">
+
+            <RadioButton
+                android:id="@+id/default_songs"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:background="@drawable/choose_song_buttons"
+                android:text="@string/default_songs"
+                android:textColor="#FFF"
+                android:buttonTint="#FFF"
+                android:onClick="onSongsTypeClicked"/>
+
+            <RadioButton
+                android:id="@+id/custom_songs"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:background="@drawable/choose_song_buttons"
+                android:text="@string/import_song"
+                android:textColor="#FFF"
+                android:buttonTint="#FFF"
+                android:onClick="onSongsTypeClicked"/>
+
+        </RadioGroup>
+
+        <ScrollView
+            android:id="@+id/scroll_songs"
+            android:layout_below="@+id/song_options"
+            android:layout_above="@+id/save_song_buttons"
+            android:layout_width="match_parent"
+            android:background="#4c696e"
+            android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/songs_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/song_options"
+            android:layout_above="@id/save_song_buttons">
+
+
+        </RadioGroup>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/save_song_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/save_song_selection_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:background="@drawable/choose_song_buttons"
+                android:text="@string/save"
+                android:textColor="#FFF"
+                android:buttonTint="#FFF"/>
+
+            <Button
+                android:id="@+id/cancel_song_selection__button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:background="@drawable/choose_song_buttons"
+                android:text="@string/cancel"
+                android:textColor="#FFF"
+                android:buttonTint="#FFF"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
